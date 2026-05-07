@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO Basic ===== -->
+  <title>AFTER IMAGE — 10年の残像。| GALLERY DOT 10th Anniversary</title>
+  <meta name="description" content="GALLERY DOT 10周年記念展「AFTER IMAGE」。2026年1月10日〜26日、東京・神宮前。事前予約で限定記念マグカッププレゼント。折原柚衣、NORI、佐伯凛、Hanna K.、境直斗の新作・未公開作を展示。">
+  <meta name="keywords" content="GALLERY DOT, AFTER IMAGE, 10周年, 現代美術, 展覧会, 神宮前, 原宿, アート, ギャラリー, 記念マグカップ, 来場予約">
+  <meta name="author" content="GALLERY DOT">
+  <meta name="robots" content="index, follow">
+
+  <!-- TODO: 本番ドメイン確定後に差し替え -->
+  <link rel="canonical" href="https://gallery-dot.jp/afterimage">
+
+  <!-- ===== OGP (Facebook / LINE等) ===== -->
+  <meta property="og:title" content="AFTER IMAGE — 10年の残像。| GALLERY DOT 10th Anniversary">
+  <meta property="og:description" content="GALLERY DOT 10周年記念展。事前予約で限定記念マグカッププレゼント。2026.1.10–1.26 東京・神宮前">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gallery-dot.jp/afterimage">
+  <meta property="og:image" content="https://gallery-dot.jp/afterimage/img/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="GALLERY DOT">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AFTER IMAGE — 10年の残像。| GALLERY DOT">
+  <meta name="twitter:description" content="10周年記念展。事前予約で限定マグカッププレゼント。2026.1.10–1.26">
+  <meta name="twitter:image" content="https://gallery-dot.jp/afterimage/img/ogp.png">
+  <!-- TODO: Twitter(X)アカウント確定後に差し替え -->
+  <!-- <meta name="twitter:site" content="@gallerydot"> -->
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- ===== Theme Color (モバイルブラウザUI) ===== -->
+  <meta name="theme-color" content="#111216">
+  <meta name="msapplication-TileColor" content="#111216">
+
+  <!-- ===== 構造化データ (JSON-LD) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExhibitionEvent",
+    "name": "AFTER IMAGE — 10年の残像",
+    "description": "GALLERY DOT 10周年記念展。光が去ったあとに浮かぶ像のように、創作の時差を見つめる展覧会。",
+    "startDate": "2026-01-10T12:00:00+09:00",
+    "endDate": "2026-01-26T19:00:00+09:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "GALLERY DOT",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "神宮前 1-2-3 DOT BLDG 1F",
+        "addressLocality": "渋谷区",
+        "addressRegion": "東京都",
+        "postalCode": "150-0001",
+        "addressCountry": "JP"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "GALLERY DOT",
+      "url": "https://gallery-dot.jp"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2025-12-01",
+      "url": "https://gallery-dot.jp/afterimage#reservation"
+    },
+    "image": "https://gallery-dot.jp/afterimage/img/ogp.png",
+    "performer": [
+      { "@type": "Person", "name": "折原 柚衣 (Yui Orihara)" },
+      { "@type": "Person", "name": "NORI (野里 直)" },
+      { "@type": "Person", "name": "佐伯 凛 (Rin Saeki)" },
+      { "@type": "Person", "name": "Hanna K." },
+      { "@type": "Person", "name": "境 直斗 (Naoto Sakai)" }
+    ]
+  }
+  </script>
+
+  <!-- ===== Fonts ===== -->
+  <!-- Preconnect（DNSルックアップ高速化） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload（ヒーローで最初に見えるフォントを優先） -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+
+  <!-- Google Fonts 読み込み -->
+  <!-- Playfair Display: 見出し・タイトル（英語） -->
+  <!-- Shippori Mincho: 本文・日本語見出し -->
+  <!-- Outfit: UI・ラベル・ナビ -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Shippori+Mincho:wght@300;400&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <!-- Webフォント読み込み中のFOUT（ちらつき）対策 -->
+  <style>
+    /* フォント読み込み完了前はbodyを非表示にしない（display:swap） */
+    /* フォールバックフォントのサイズ調整でレイアウトシフトを最小化 */
+    @font-face {
+      font-family: 'Playfair Fallback';
+      src: local('Georgia'), local('Times New Roman');
+      size-adjust: 105%;
+      ascent-override: 95%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: 'Shippori Fallback';
+      src: local('Hiragino Mincho Pro'), local('Yu Mincho'), local('serif');
+      size-adjust: 100%;
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: 'Outfit Fallback';
+      src: local('Helvetica Neue'), local('Helvetica'), local('Arial');
+      size-adjust: 100%;
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+
+    /* フォント読み込み前は透明にして、読み込み後にフェードイン */
+    .fonts-loading body {
+      opacity: 0;
+    }
+    .fonts-loaded body {
+      opacity: 1;
+      transition: opacity .3s ease;
+    }
+  </style>
+
+  <!-- フォント読み込み検知 -->
+  <script>
+    // フォント読み込み完了を検知してクラスを切り替え
+    document.documentElement.classList.add('fonts-loading');
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load('300 1em "Playfair Display"'),
+        document.fonts.load('300 1em "Shippori Mincho"'),
+        document.fonts.load('300 1em "Outfit"')
+      ]).then(() => {
+        document.documentElement.classList.remove('fonts-loading');
+        document.documentElement.classList.add('fonts-loaded');
+      }).catch(() => {
+        // フォント読み込み失敗してもサイトは表示する
+        document.documentElement.classList.remove('fonts-loading');
+        document.documentElement.classList.add('fonts-loaded');
+      });
+      // 3秒のタイムアウト — フォントが遅い場合でもサイトを表示
+      setTimeout(() => {
+        document.documentElement.classList.remove('fonts-loading');
+        document.documentElement.classList.add('fonts-loaded');
+      }, 3000);
+    } else {
+      // Font Loading API非対応ブラウザ
+      document.documentElement.classList.remove('fonts-loading');
+      document.documentElement.classList.add('fonts-loaded');
+    }
+  </script>
+
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- TODO: GA4 / タグマネージャーをここに挿入 -->
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo"><img src="img/logo.png" alt="Gallery Dot" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','GALLERY DOT')"></a>
+  <ul class="nav-links">
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#exhibition">Artists</a></li>
+    <li><a href="#benefit">Benefit</a></li>
+    <li><a href="#schedule">Events</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#reservation" class="nav-cta-btn">Reserve</a>
+  <span class="nav-r" id="menuBtn">Menu</span>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose">Close</button>
+  <a href="#concept">Concept</a>
+  <a href="#exhibition">Artists</a>
+  <a href="#benefit">Benefit</a>
+  <a href="#schedule">Events</a>
+  <a href="#faq">FAQ</a>
+  <a href="#reservation" style="color:var(--accent-t)">Reserve</a>
+</div>
+
+<!-- ====== 01. HERO ====== -->
+<section class="hero" id="hero">
+  <div class="hero-img"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-c">
+    <h1 class="hero-title"><span>After</span> Image</h1>
+    <p class="hero-jp">— 10年の残像</p>
+    <div class="hero-ctas">
+      <a href="#reservation" class="hero-cta-link">来場予約する</a>
+      <!-- TODO: LINE公式アカウントURL差し替え -->
+      <a href="#" class="hero-cta-link" style="color:rgba(216,213,208,.3)">LINE で最新情報を受け取る</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- ====== 02. CONCEPT (Light) ====== -->
+<section class="s s-light" id="concept">
+  <div class="s-num fi-left">01 &nbsp; Concept</div>
+  <div class="concept-grid">
+    <div>
+      <p class="cq"><span class="cq-line">光が去ったあとに</span><span class="cq-line">浮かぶ像のように、</span><span class="cq-line">創作の時差を見つめる。</span></p>
+      <p class="s-body fi-anim">10年で出会った作家たちの新作・未公開作を中心に、記憶と物質が交わる瞬間を展示します。</p>
+    </div>
+    <div class="c-img img-reveal fi-anim">
+      <img src="img/Gallery_Dot.png" alt="GALLERY DOT 内観・外観" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ====== 03. EXHIBITION (Dark) ====== -->
+<section class="s s-dark" id="exhibition" style="padding-left:0;padding-right:0">
+  <div style="padding:0 32px">
+    <div class="s-num fi-left">02 &nbsp; Artists</div>
+    <div class="s-h fi-blur">Participating Artists</div>
+    <div class="s-sub fi-anim">参加アーティスト</div>
+  </div>
+  <div class="a-scroll">
+    <div class="a-card fi-anim">
+      <img src="img/Orihara.png" alt="折原 柚衣《Afterglow #07》" loading="lazy">
+      <div class="a-info">
+        <div class="a-name">折原 柚衣</div>
+        <div class="a-work">《Afterglow #07》2025<br>ラムダプリント＋UVレジン, 100×140</div>
+        <div class="a-cr">© Yui Orihara / Courtesy of Gallery Dot</div>
+      </div>
+    </div>
+    <div class="a-card fi-anim">
+      <img src="img/NORI.png" alt="NORI《Echo Pendulum》" loading="lazy">
+      <div class="a-info">
+        <div class="a-name">NORI</div>
+        <div class="a-work">《Echo Pendulum》2025<br>ステンレス・磁石・モーター, W120×D80×H210</div>
+        <div class="a-cr">© NORI / Courtesy of Gallery Dot</div>
+      </div>
+    </div>
+    <div class="a-card fi-anim">
+      <img src="img/saeki.png" alt="佐伯 凛《weave_ghost 3》" loading="lazy">
+      <div class="a-info">
+        <div class="a-name">佐伯 凛</div>
+        <div class="a-work">《weave_ghost 3》2025<br>ジャカード織（シルク/和紙）, 180×90</div>
+        <div class="a-cr">© Rin Saeki / Courtesy of Gallery Dot</div>
+      </div>
+    </div>
+    <div class="a-card fi-anim">
+      <img src="img/Hanna.png" alt="Hanna K.《Residual Bodies》" loading="lazy">
+      <div class="a-info">
+        <div class="a-name">Hanna K.</div>
+        <div class="a-work">《Residual Bodies》2023<br>モノタイプ＋グラファイト, 70×100</div>
+        <div class="a-cr">© Hanna K. / Courtesy of Gallery Dot</div>
+      </div>
+    </div>
+    <div class="a-card fi-anim">
+      <img src="img/Sakai_Naoto.png" alt="境 直斗《After Silence》" loading="lazy">
+      <div class="a-info">
+        <div class="a-name">境 直斗</div>
+        <div class="a-work">《After Silence》2025<br>サウンド・インスタレーション, 可変</div>
+        <div class="a-cr">© Naoto Sakai / Courtesy of Gallery Dot</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 04. BENEFIT (Mist) ====== -->
+<section class="s s-mist" id="benefit">
+  <div class="s-num fi-left">03 &nbsp; Benefit</div>
+  <div class="b-img img-reveal fi-anim"><img src="img/Cup.png" alt="GALLERY DOT 10周年記念マグカップ（黒・白）" loading="lazy"></div>
+  <div class="b-title fi-anim">事前予約で来場された方に、<br>記念マグカップをプレゼント。</div>
+  <ul class="b-list fi-anim">
+    <li>当日QRチェックインで1名1点進呈</li>
+    <li>各日40個（黒・白2色）</li>
+    <li>同伴2名まで入場可 — 特典は予約者のみ</li>
+  </ul>
+  <div class="stk fi-anim">
+    <div class="stk-h">Daily Stock</div>
+    <div class="stk-tabs">
+      <div class="stk-tab on">Week 1<span>1/10–16</span></div>
+      <div class="stk-tab">Week 2<span>1/17–23</span></div>
+      <div class="stk-tab">Week 3<span>1/24–26</span></div>
+    </div>
+    <!-- Week 1 -->
+    <div class="stk-week on">
+      <div class="stk-d"><div class="stk-dt">土10</div><div class="stk-lo">残8</div></div>
+      <div class="stk-d"><div class="stk-dt">日11</div><div class="stk-lo">12</div></div>
+      <div class="stk-d"><div class="stk-dt">月12</div><div class="stk-md">18</div></div>
+      <div class="stk-d stk-cl"><div class="stk-dt">火13</div><div>—</div></div>
+      <div class="stk-d"><div class="stk-dt">水14</div><div class="stk-md">22</div></div>
+      <div class="stk-d"><div class="stk-dt">木15</div><div class="stk-hi">30</div></div>
+      <div class="stk-d"><div class="stk-dt">金16</div><div class="stk-hi">34</div></div>
+    </div>
+    <!-- Week 2 -->
+    <div class="stk-week">
+      <div class="stk-d"><div class="stk-dt">土17</div><div class="stk-md">20</div></div>
+      <div class="stk-d"><div class="stk-dt">日18</div><div class="stk-md">16</div></div>
+      <div class="stk-d"><div class="stk-dt">月19</div><div class="stk-md">24</div></div>
+      <div class="stk-d stk-cl"><div class="stk-dt">火20</div><div>—</div></div>
+      <div class="stk-d"><div class="stk-dt">水21</div><div class="stk-hi">32</div></div>
+      <div class="stk-d"><div class="stk-dt">木22</div><div class="stk-hi">36</div></div>
+      <div class="stk-d"><div class="stk-dt">金23</div><div class="stk-hi">38</div></div>
+    </div>
+    <!-- Week 3 -->
+    <div class="stk-week">
+      <div class="stk-d"><div class="stk-dt">土24</div><div class="stk-hi">28</div></div>
+      <div class="stk-d"><div class="stk-dt">日25</div><div class="stk-hi">35</div></div>
+      <div class="stk-d"><div class="stk-dt">月26</div><div class="stk-hi">40</div></div>
+      <div class="stk-d stk-cl"><div class="stk-dt"></div><div></div></div>
+      <div class="stk-d stk-cl"><div class="stk-dt"></div><div></div></div>
+      <div class="stk-d stk-cl"><div class="stk-dt"></div><div></div></div>
+      <div class="stk-d stk-cl"><div class="stk-dt"></div><div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 05. ACCESS (Dark) ====== -->
+<section class="s s-dark" id="access">
+  <div class="s-num fi-left">04 &nbsp; Access</div>
+  <div class="access-grid">
+    <div class="acc-map fi-anim">
+      <!-- TODO: 正確な座標に差し替え -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.169!2d139.7025!3d35.6695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQwJzEwLjIiTiAxMznCsDQyJzA5LjAiRQ!5e0!3m2!1sja!2sjp!4v1" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="fi-anim">
+      <div class="acc-t">Gallery Dot</div>
+      <div class="acc-dl"><div class="acc-dt">Address</div><div class="acc-dd">東京都渋谷区神宮前 1-2-3 DOT BLDG 1F</div></div>
+      <div class="acc-dl"><div class="acc-dt">Access</div><div class="acc-dd">JR 原宿駅 徒歩5分<br>明治神宮前駅 徒歩3分</div></div>
+      <div class="acc-dl"><div class="acc-dt">Hours</div><div class="acc-dd">12:00 – 19:00（火曜休）</div></div>
+      <div class="acc-dl"><div class="acc-dt">Contact</div><div class="acc-dd">info@gallery-dot.jp</div></div>
+      <div class="acc-bar">♿ 1Fフラットアクセス。車いす可。ベビーカー預かりあり。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 06. SCHEDULE (Light) ====== -->
+<section class="s s-light" id="schedule">
+  <div class="s-num fi-left">05 &nbsp; Events</div>
+  <div class="s-h fi-blur">Schedule</div>
+  <div class="s-sub fi-anim">トーク / パフォーマンス</div>
+
+  <div class="ev-item fi-anim">
+    <div class="ev-date">1.11 Sun<span class="ev-time">17:00</span></div>
+    <div>
+      <div class="ev-title">AFTER IMAGE と、10年のキュレーション</div>
+      <div class="ev-desc">佐伯奈央 × 水野圭太 × 久保田ミオ</div>
+      <div class="ev-meta">定員40名 ｜ 要予約</div>
+    </div>
+  </div>
+  <div class="ev-item fi-anim">
+    <div class="ev-date">1.17 Sat<span class="ev-time">18:00</span></div>
+    <div>
+      <div class="ev-title">記憶・物質・イメージの残り方</div>
+      <div class="ev-desc">森本紗英 × 高橋凌</div>
+      <div class="ev-meta">定員35名 ｜ 要予約</div>
+    </div>
+  </div>
+  <div class="ev-item fi-anim">
+    <div class="ev-date">1.18 Sun<span class="ev-time">18:30</span></div>
+    <div>
+      <div class="ev-title">AFTER IMAGE / Light Trace</div>
+      <div class="ev-desc">NOA ISHIKAWA × KEN OTOMO</div>
+      <div class="ev-meta">定員30名 ｜ 要予約</div>
+    </div>
+  </div>
+  <div class="ev-item fi-anim">
+    <div class="ev-date">1.24 Sat<span class="ev-time">16:00</span></div>
+    <div>
+      <div class="ev-title">若手作家が語る AFTER IMAGE</div>
+      <div class="ev-desc">山城遥 · 小林新 · Chen Rui</div>
+      <div class="ev-meta">定員50名 ｜ 予約推奨</div>
+    </div>
+  </div>
+  <div class="ev-item fi-anim">
+    <div class="ev-date">1.25 Sun<span class="ev-time">17:30</span></div>
+    <div>
+      <div class="ev-title">Archive Body</div>
+      <div class="ev-desc">牧村澪 × 井上湊</div>
+      <div class="ev-meta">当日観覧可</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 07. HISTORY (Dark) ====== -->
+<section class="s s-dark" id="history">
+  <div class="s-num fi-left">06 &nbsp; History</div>
+  <div class="s-h fi-blur">A Decade of Dot</div>
+  <div class="s-sub fi-anim">歩み</div>
+  <div class="tl">
+    <div class="tl-i fi-left"><div class="tl-y">2016</div><div class="tl-content"><div class="tl-t">GALLERY DOT 開廊。</div></div></div>
+    <div class="tl-i fi-left"><div class="tl-y">2018</div><div class="tl-content"><div class="tl-t">「New Vision Tokyo」。</div><div class="tl-a">Tokyo Art Directors Award 入選</div></div></div>
+    <div class="tl-i fi-left"><div class="tl-y">2021</div><div class="tl-content"><div class="tl-t">「Shadow Index」都美連携。</div><div class="tl-a">優秀企画賞</div></div></div>
+    <div class="tl-i fi-left"><div class="tl-y">2023</div><div class="tl-content"><div class="tl-t">「Edge After Edge」。</div><div class="tl-a">写真協会ブックアワード 短list</div></div></div>
+    <div class="tl-i fi-left"><div class="tl-y">2024</div><div class="tl-content"><div class="tl-t">企業コレクション 5件。</div></div></div>
+    <div class="tl-i fi-left"><div class="tl-y">2025</div><div class="tl-content"><div class="tl-t">AFTER IMAGE。</div></div></div>
+  </div>
+</section>
+
+<!-- ====== 08. FAQ (Light) ====== -->
+<section class="s s-light" id="faq">
+  <div class="s-num fi-left">07 &nbsp; FAQ</div>
+
+  <div class="fq-i fi-anim"><button class="fq-q">予約なしでも入れますか？<span class="fq-ic">+</span></button><div class="fq-a"><div class="fq-a-in">混雑時は予約優先・入場制限があります。特典は事前予約で来場された方のみです。</div></div></div>
+  <div class="fq-i fi-anim"><button class="fq-q">同伴者も特典はもらえますか？<span class="fq-ic">+</span></button><div class="fq-a"><div class="fq-a-in">特典は予約者ご本人のみです。同伴2名まで入場可能ですが、マグカップの進呈は予約者に限ります。</div></div></div>
+  <div class="fq-i fi-anim"><button class="fq-q">時間変更はできますか？<span class="fq-ic">+</span></button><div class="fq-a"><div class="fq-a-in">前日18:00まで、確認メール内の「予約変更」リンクから変更いただけます。</div></div></div>
+  <div class="fq-i fi-anim"><button class="fq-q">子連れで入場できますか？<span class="fq-ic">+</span></button><div class="fq-a"><div class="fq-a-in">はい。未就学児は安全のため手をつなぐなどのご配慮をお願いします。ベビーカーは受付にて預かり可能です。</div></div></div>
+  <div class="fq-i fi-anim"><button class="fq-q">撮影はできますか？<span class="fq-ic">+</span></button><div class="fq-a"><div class="fq-a-in">静止画のみ可（フラッシュ・動画不可）。撮影不可表示の作品は全撮影禁止です。作品から50cm以上離れてください。</div></div></div>
+</section>
+
+<!-- ====== 09. TERMS (Dark) ====== -->
+<section class="s s-dark" id="terms" style="padding-top:80px;padding-bottom:80px">
+  <div class="s-num fi-left">08 &nbsp; Terms</div>
+  <div class="fi-anim">
+    <div class="tm-h">規約</div>
+    <ul class="tm-list">
+      <li>特典は予約者本人1点限り。転売禁止。</li>
+      <li>撮影：静止画のみ。フラッシュ・動画不可。</li>
+    </ul>
+    <div class="tm-h">個人情報</div>
+    <ul class="tm-list">
+      <li>保存期間：会期終了後90日で削除。</li>
+      <li>開示・削除：privacy@gallery-dot.jp</li>
+    </ul>
+    <a class="tm-link" href="#">規約全文 →</a>
+  </div>
+</section>
+
+<!-- ====== 10. RESERVATION (Mist) ====== -->
+<section class="s s-mist" id="reservation">
+  <div class="s-num fi-left">09 &nbsp; Reservation</div>
+  <div class="res-grid">
+    <div>
+      <div class="s-h fi-blur">Book Your Visit</div>
+      <div class="s-sub fi-anim">来場予約</div>
+      <p class="res-p fi-anim">事前予約で来場された方に、記念マグカップをプレゼント。</p>
+    </div>
+    <div class="f-box fi-anim">
+      <form id="rForm" novalidate>
+        <div class="fg"><div class="fl">氏名 <span class="fl-r">*</span></div><input type="text" class="fi" id="fName" placeholder="山田 太郎" required><div class="fe" id="eName">氏名を入力してください</div></div>
+        <div class="fg"><div class="fl">メールアドレス <span class="fl-r">*</span></div><input type="email" class="fi" id="fEmail" placeholder="example@email.com" required><div class="fe" id="eEmail">正しいメールアドレスを入力してください</div></div>
+        <div class="fg"><div class="fl">電話番号 <span class="fl-r">*</span></div><input type="tel" class="fi" id="fPhone" placeholder="090-0000-0000" required><div class="fe" id="ePhone">電話番号を入力してください</div></div>
+        <div class="f-row">
+          <div class="fg"><div class="fl">来場日 <span class="fl-r">*</span></div><select class="fs" id="fDate" required><option value="">日付を選択</option></select><div class="fe" id="eDate">来場日を選択してください</div></div>
+          <div class="fg"><div class="fl">時間帯 <span class="fl-r">*</span></div>
+            <select class="fs" id="fTime" required>
+              <option value="">時間帯を選択</option>
+              <option value="12:00">12:00–12:30</option>
+              <option value="12:30">12:30–13:00</option>
+              <option value="13:00">13:00–13:30</option>
+              <option value="13:30">13:30–14:00</option>
+              <option value="14:00">14:00–14:30</option>
+              <option value="14:30">14:30–15:00</option>
+              <option value="15:00">15:00–15:30</option>
+              <option value="15:30">15:30–16:00</option>
+              <option value="16:00">16:00–16:30</option>
+              <option value="16:30">16:30–17:00</option>
+              <option value="17:00">17:00–17:30</option>
+              <option value="17:30">17:30–18:00</option>
+              <option value="18:00">18:00–18:30</option>
+              <option value="18:30">18:30–19:00</option>
+            </select>
+            <div class="fe" id="eTime">時間帯を選択してください</div>
+          </div>
+        </div>
+        <div class="fg"><div class="fl">同伴人数</div>
+          <select class="fs" id="fGuest">
+            <option value="0">同伴者なし</option>
+            <option value="1">1名</option>
+            <option value="2">2名</option>
+          </select>
+        </div>
+        <div style="height:12px"></div>
+        <label class="f-cb"><input type="checkbox" id="fTalk"><span>トークイベント参加を希望</span></label>
+        <!-- TODO: LINE公式アカウントURL差し替え -->
+        <label class="f-cb"><input type="checkbox" id="fLine"><span>LINE で最新情報を受け取る</span></label>
+        <label class="f-cb"><input type="checkbox" id="fTerms" required><span><a href="#terms" class="lnk">利用規約</a>に同意 <span class="fl-r">*</span></span></label>
+        <div class="fe" id="eTerms">規約への同意が必要です</div>
+        <button type="submit" class="f-btn" id="subBtn">予約を確定する</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FINAL CTA (Light) ====== -->
+<section class="s s-light final">
+  <div class="final-line"></div>
+  <div class="s-num fi-left" style="margin-bottom:24px;text-align:center">10th Anniversary</div>
+  <div class="final-t fi-anim"><span>After</span> Image</div>
+  <div class="final-sub fi-anim">2026.1.10 — 1.26 &nbsp;·&nbsp; Gallery Dot</div>
+  <a href="#reservation" class="final-cta-link fi-anim">来場予約する</a>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="foot">
+  <div class="foot-logo"><img src="img/logo.png" alt="Gallery Dot" onerror="this.style.display='none';this.parentElement.insertAdjacentText('beforeend','GALLERY DOT')"></div>
+  <div class="foot-info">info@gallery-dot.jp<br>東京都渋谷区神宮前 1-2-3 DOT BLDG 1F</div>
+  <div class="foot-c">© 2026 Gallery Dot</div>
+</footer>
+
+<!-- ====== MODAL ====== -->
+<div class="modal-ov" id="modal">
+  <div class="modal">
+    <div class="modal-check">✓</div>
+    <h3>Reservation Complete</h3>
+    <p>ご予約ありがとうございます。</p>
+    <p>下記の予約番号をお控えください。<br>確認メールにQRコードをお送りしました。</p>
+    <div class="modal-id" id="resId">GD-2026-0001</div>
+    <p style="font-size:10px;color:var(--td5)">当日は入口でQRコードをご提示ください。</p>
+    <button class="modal-close" id="modalClose">閉じる</button>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
