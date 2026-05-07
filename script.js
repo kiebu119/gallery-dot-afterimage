@@ -171,6 +171,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ===== PHONE AUTO-FORMAT (ハイフン自動挿入) ===== */
+  const phoneInput = document.getElementById('fPhone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      // エラークリア
+      phoneInput.classList.remove('err');
+      const fe = phoneInput.closest('.fg')?.querySelector('.fe');
+      if (fe) fe.classList.remove('show');
+
+      // 数字だけ取り出す
+      let digits = phoneInput.value.replace(/\D/g, '');
+
+      // 最大11桁に制限
+      if (digits.length > 11) digits = digits.slice(0, 11);
+
+      // ハイフン自動挿入
+      let formatted = '';
+      if (digits.length <= 3) {
+        formatted = digits;
+      } else if (digits.length <= 7) {
+        formatted = digits.slice(0, 3) + '-' + digits.slice(3);
+      } else {
+        formatted = digits.slice(0, 3) + '-' + digits.slice(3, 7) + '-' + digits.slice(7);
+      }
+
+      phoneInput.value = formatted;
+    });
+
+    // inputType=tel でスマホに数字キーボードを出す（HTMLにも設定済み）
+    phoneInput.setAttribute('inputmode', 'tel');
+  }
+
   /* ===== FORM VALIDATION ===== */
   const form = document.getElementById('rForm');
   if (form) {
@@ -200,7 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { email.classList.add('err'); document.getElementById('eEmail').classList.add('show'); valid = false; }
 
       const phone = document.getElementById('fPhone');
-      if (!phone.value.trim() || !/^[\d\-+()]{10,15}$/.test(phone.value.replace(/\s/g, ''))) { phone.classList.add('err'); document.getElementById('ePhone').classList.add('show'); valid = false; }
+      const phoneDigits = phone.value.replace(/\D/g, '');
+      if (!phone.value.trim() || phoneDigits.length < 10 || phoneDigits.length > 11) { phone.classList.add('err'); document.getElementById('ePhone').classList.add('show'); valid = false; }
 
       const date = document.getElementById('fDate');
       if (!date.value) { date.classList.add('err'); document.getElementById('eDate').classList.add('show'); valid = false; }
@@ -215,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // ======================================
         // TODO: 下記URLをGASデプロイURLに差し替え
         // ======================================
-        const GAS_URL = 'https://script.google.com/macros/s/AKfycbydfyzN6vT2Tcxssiitel91atz9M7HKb747tFgb1s0RVBm7ec3hSWVqkii4kU-xI0ww6A/exec';
+        const GAS_URL = 'YOUR_GAS_DEPLOY_URL_HERE';
 
         const submitBtn = document.getElementById('subBtn');
         const originalText = submitBtn.textContent;
