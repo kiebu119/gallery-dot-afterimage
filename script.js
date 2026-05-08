@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // ======================================
         // TODO: 下記URLをGASデプロイURLに差し替え
         // ======================================
-        const GAS_URL = 'https://script.google.com/macros/s/xxxxx.../exec';
+        const GAS_URL = 'https://script.google.com/macros/s/AKfycbydfyzN6vT2Tcxssiitel91atz9M7HKb747tFgb1s0RVBm7ec3hSWVqkii4kU-xI0ww6A/exec';
         const submitBtn = document.getElementById('subBtn');
         const originalText = submitBtn.textContent;
 
