@@ -341,8 +341,12 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   background:linear-gradient(to bottom,transparent,var(--bd) 10%,var(--bd) 90%,transparent);
 }
 .tl-i {
-  position:relative; padding-bottom:40px;
-  display:grid; grid-template-columns:80px 1fr; gap:32px; align-items:baseline;
+  position:relative;
+  padding-bottom:40px;
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:32px;
+  align-items:start;
 }
 .tl-i::before {
   content:''; position:absolute; left:87px; top:10px; width:6px; height:6px;
@@ -352,7 +356,11 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   font-family:var(--f-d); font-size:20px; font-style:italic;
   color:var(--td3); text-align:right;
 }
-.tl-content {}
+.tl-content {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
 .tl-t {
   font-family:var(--f-d);
   font-size:18px;
@@ -362,8 +370,13 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   text-align:center;
 }
 .tl-a {
-  font-family:var(--f-s); font-size:9px; color:var(--aqua);
-  margin-top:6px; letter-spacing:.05em;
+  font-family:var(--f-s);
+  font-size:9px;
+  color:var(--aqua);
+  margin-top:4px;
+  letter-spacing:.05em;
+  display:block;
+  grid-column: 2;
 }
 
 /* ===== FAQ ===== */
@@ -539,7 +552,7 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   transition:opacity 1.5s ease, transform 8s ease;
 }
 .hero-slide.active {
-  opacity:.3;
+  opacity:.3 !important;
   transform:scale(1);
 }
 .hero-slide.prev {
@@ -790,10 +803,9 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   /* Schedule — 2col date+content */
   .ev-item { display:grid; grid-template-columns:140px 1fr; gap:24px; }
 
-  /* History — all centered on PC */
-  #history { text-align:center; }
-  #history .s-num, #history .s-h, #history .s-sub { text-align:center; }
-  .tl { max-width:550px; margin:0 auto; text-align:left; }
+  /* History — timeline centered on PC, headings left */
+#history { text-align:left; }
+.tl { max-width:550px; margin:0 auto; text-align:left; }
 
   /* FAQ — limit width for readability */
   .fq-i { max-width:800px; }
