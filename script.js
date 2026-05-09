@@ -94,9 +94,37 @@ document.addEventListener('DOMContentLoaded', () => {
     tlObs.observe(timeline);
   }
 
+  /* ===== HERO SLIDESHOW ===== */
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot-ind');
+  let currentSlide = 0;
+
+  function nextSlide() {
+    // 現在のスライドをprevに
+    slides[currentSlide].classList.remove('active');
+    slides[currentSlide].classList.add('prev');
+    dots[currentSlide].classList.remove('active');
+
+    // prevクラスを少し後に削除
+    const prevIdx = currentSlide;
+    setTimeout(() => {
+      slides[prevIdx].classList.remove('prev');
+    }, 1500);
+
+    // 次のスライドへ
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  // 5秒ごとに切り替え
+  if (slides.length > 1) {
+    setInterval(nextSlide, 5000);
+  }
+
   /* ===== PARALLAX — Hero background ===== */
-  const heroImg = document.querySelector('.hero-img');
-  if (heroImg) {
+  const heroSlides = document.querySelector('.hero-slides');
+  if (heroSlides) {
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
@@ -104,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const scrolled = window.scrollY;
           const heroH = window.innerHeight;
           if (scrolled < heroH * 1.5) {
-            heroImg.style.transform = `translateY(${scrolled * 0.3}px) scale(1.08)`;
+            heroSlides.style.transform = `translateY(${scrolled * 0.25}px)`;
           }
           ticking = false;
         });

@@ -147,11 +147,6 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   display:flex; flex-direction:column; justify-content:flex-end;
   padding:0 32px 64px; overflow:hidden;
 }
-.hero-img {
-  position:absolute; inset:0;
-  background:url('img/Orihara.png') center 25%/cover no-repeat;
-  opacity:.4; filter:contrast(1.1);
-}
 .hero-grad {
   position:absolute; inset:0;
   background:linear-gradient(180deg,
@@ -528,7 +523,48 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   color:rgba(216,213,208,.2); margin-top:24px;
 }
 
-/* ===== ANIMATION SYSTEM ===== */
+/* ===== HERO SLIDESHOW ===== */
+.hero-slides {
+  position:absolute; inset:0; overflow:hidden;
+}
+.hero-slide {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center 25%;
+  opacity:0;
+  transform:scale(1.08);
+  transition:opacity 1.5s ease, transform 8s ease;
+}
+.hero-slide.active {
+  opacity:.3;
+  transform:scale(1);
+}
+.hero-slide.prev {
+  opacity:0;
+  transform:scale(1.05);
+}
+
+/* スライドインジケーター */
+.hero-indicators {
+  position:absolute;
+  bottom:5rem;
+  right:32px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  z-index:3;
+}
+.hero-dot-ind {
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:rgba(216,213,208,.2);
+  transition:background .5s, height .5s;
+}
+.hero-dot-ind.active {
+  background:rgba(216,213,208,.6);
+  height:16px;
+  border-radius:2px;
+}
 
 /* Base: Fade up (default) */
 .fi-anim {
@@ -739,8 +775,10 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   /* Artists */
   .a-card { flex:0 0 360px; }
 
-  /* Benefit — 2col */
-  .benefit-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+  /* Benefit — 2col, image smaller on PC */
+  .benefit-grid { display:grid; grid-template-columns:420px 1fr; gap:80px; align-items:start; }
+  .b-img { max-width:420px; }
+  .b-img img { max-height:480px; object-fit:cover; }
 
   /* Access — 2col */
   .access-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
@@ -748,8 +786,10 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   /* Schedule — 2col date+content */
   .ev-item { display:grid; grid-template-columns:140px 1fr; gap:24px; }
 
-  /* History — centered timeline */
-  .tl { max-width:500px; margin:0 auto; text-align:center; }
+  /* History — all centered on PC */
+  #history { text-align:center; }
+  #history .s-num, #history .s-h, #history .s-sub { text-align:center; }
+  .tl { max-width:550px; margin:0 auto; text-align:left; }
 
   /* FAQ — limit width for readability */
   .fq-i { max-width:800px; }
