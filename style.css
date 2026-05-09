@@ -354,8 +354,12 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
 }
 .tl-content {}
 .tl-t {
-  font-family:var(--f-d); font-size:18px; font-style:italic;
-  color:var(--td2); line-height:1.5;
+  font-family:var(--f-d);
+  font-size:18px;
+  font-style:italic;
+  color:var(--td2);
+  line-height:1.5;
+  text-align:center;
 }
 .tl-a {
   font-family:var(--f-s); font-size:9px; color:var(--aqua);
