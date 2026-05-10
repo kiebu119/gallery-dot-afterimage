@@ -82,6 +82,9 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
 }
 .s-dark .s-body { color:var(--td3); }
 .s-light .s-body, .s-mist .s-body { color:var(--tl3); }
+#concept .s-body {
+  max-width:none;
+}
 
 /* ===== NAV ===== */
 .nav {
@@ -793,7 +796,7 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   .hero-c { max-width:1100px; margin:0 auto; width:100%; }
 
   /* Concept — 2col */
-  .concept-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:80px; align-items:center; }
+  .concept-grid { display:grid; grid-template-columns:2fr 1fr; gap:80px; align-items:center; }
   .c-img { margin-top:0; }
 
   /* Artists */
