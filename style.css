@@ -809,9 +809,9 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
   /* Schedule — 2col date+content */
   .ev-item { display:grid; grid-template-columns:140px 1fr; gap:24px; }
 
-  /* History — all centered on PC */
+  /* History — timeline centered on PC, headings left */
   #history { text-align:left; }
-  .tl { max-width:550px; margin:0 auto; text-align:left; }
+  .tl { max-width:550px; margin:0 auto; }
 
   /* FAQ — limit width for readability */
   .fq-i { max-width:800px; }
