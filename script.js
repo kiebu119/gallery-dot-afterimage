@@ -177,6 +177,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* ===== STOCK — GASからリアルタイム取得 ===== */
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycby08IBRMVmMoTDwsf47Ge4zXHRCCFKNG3a-gTPc6-mLmiXtTyt3EBHsqjEVwl2wDy4Jvg/exec';
+
+  // 在庫データを取得してUIを更新
+  function loadInventory() {
+    fetch(GAS_URL)
+      .then(res => res.json())
+      .then(data => {
+        // 各日のstk-dを更新
+        document.querySelectorAll('.stk-d').forEach(el => {
+          const dateEl = el.querySelector('.stk-dt');
+          const stockEl = el.querySelector('div:last-child');
+          if (!dateEl || !stockEl) return;
+
+          // data-dateがあれば使う、なければskip
+          const dateAttr = el.dataset.date;
+          if (!dateAttr || !data[dateAttr]) return;
+
+          const remaining = data[dateAttr].remaining;
+          stockEl.textContent = remaining <= 0 ? '完売' : `残${remaining}`;
+
+          // 色分けクラスを更新
+          stockEl.className = '';
+          if (remaining <= 0) {
+            stockEl.classList.add('stk-cl');
+          } else if (remaining <= 10) {
+            stockEl.classList.add('stk-lo');
+          } else if (remaining <= 20) {
+            stockEl.classList.add('stk-md');
+          } else {
+            stockEl.classList.add('stk-hi');
+          }
+        });
+      })
+      .catch(err => console.log('在庫取得エラー（ダミーデータを使用）:', err));
+  }
+
+  // ページ読み込み時に取得
+  loadInventory();
+
   /* ===== STOCK TABS ===== */
   const stkTabs = document.querySelectorAll('.stk-tab');
   const stkWeeks = document.querySelectorAll('.stk-week');
@@ -273,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!terms.checked) { document.getElementById('eTerms').classList.add('show'); valid = false; }
 
       if (valid) {
-        const GAS_URL = 'https://script.google.com/macros/s/AKfycbydfyzN6vT2Tcxssiitel91atz9M7HKb747tFgb1s0RVBm7ec3hSWVqkii4kU-xI0ww6A/exec';
+        const GAS_URL = 'https://script.google.com/macros/s/AKfycby08IBRMVmMoTDwsf47Ge4zXHRCCFKNG3a-gTPc6-mLmiXtTyt3EBHsqjEVwl2wDy4Jvg/exec';
 
         const submitBtn = document.getElementById('subBtn');
         const originalText = submitBtn.textContent;
