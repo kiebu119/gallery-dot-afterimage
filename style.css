@@ -309,6 +309,7 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
 .stk-md { color:rgba(160,128,48,.6); }
 .stk-lo { color:rgba(160,64,64,.6); }
 .stk-cl { opacity:.15; }
+.stk-loading { color:rgba(13,14,16,.15); font-size:10px; }
 
 /* ===== ACCESS ===== */
 .acc-map {
